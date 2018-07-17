@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'SearchMft.css'%}" >
+
+</head>
+
+<body>
+    <div class="view search-section">
+
+        <div class="mask flex-center rgba-blue-strong">
+            <div class="row brand">
+                <div class="col-md-12 text-left">
+                    <h1 class="head-brand" id="ns">Pharmapedia</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row form-submit">
+            <div class="col-md-12">
+                <form action="#" method="get">
+                    <input type="text" placeholder="Search by Manufacturer..." class="searching-box" id="search-med" name="search"/>
+                    <button class="btn btn-primary search-btn" onclick="DisplayMed()" name="BNAME">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-primary search-btn" onclick="SearchByMft()" name="mft">Search by Drugs</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-primary search-btn" onclick="BannedDrugs()" name="BNAME">Banned Drugs</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function SearchByMft() {
+            window.open = ("pharmapedia/index.html", "_self");
+        }
+
+        function BannedDrugs() {
+            window.open("pharmapedia/bdrug.html", "_self");
+        }
+    </script>
+</body>
+
+</html>
